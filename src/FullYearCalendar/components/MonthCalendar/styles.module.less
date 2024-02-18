@@ -1,0 +1,56 @@
+.monthContainer {
+  flex: 0 0 calc(100% / 3 - 16px);
+  display: inline-block;
+  border: 1px solid #f0f0f0;
+  width: 300px;
+  font-weight: 400;
+  font-size: 14px;
+  .header {
+    padding: 8px;
+    display: flex;
+    border-bottom: 1px solid #f0f0f0;
+    justify-content: space-between;
+  }
+  .calendarContent {
+    padding-top: 8px;
+    text-align: center;
+    vertical-align: middle;
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      position: relative;
+      min-width: 24px;
+      padding: 6px 0;
+    }
+    .inMonth {
+      color: rgba(0, 0, 0, 0.88);
+    }
+    .outOfMonth {
+      color: rgba(0, 0, 0, 0.25);
+      pointer-events: none;
+    }
+    .day {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      line-height: 24px;
+      border-radius: 4px;
+      height: 24px;
+      min-width: 24px;
+      &:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+      }
+    }
+    .selected {
+      background: #1677ff;
+      color: #fff;
+      transition: 0.2s;
+    }
+  }
+}
